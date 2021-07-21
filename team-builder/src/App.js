@@ -25,6 +25,7 @@ function App() {
       email: formValues.email.trim(),
       role: formValues.role,
     };
+    if (newUser.username || newUser.email || newUser.role) 
     setTeam([...team, newUser]);
     setFormValues(initialFormValues)
   };
@@ -39,7 +40,7 @@ function App() {
         update={updateForm}
         submit={submitForm}
         />
-        
+
       </header>
     </div>
   );
